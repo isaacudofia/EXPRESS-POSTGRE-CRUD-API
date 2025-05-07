@@ -2,6 +2,9 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import pool from "./config/db.js";
+import userRoutes from "./routes/userRoutes.js";
+import errorHandling from "./middlewares/errorHandler.js";
+
 dotenv.config();
 
 //DEFINING INSTANCES FOR THE APPLICATION
@@ -11,6 +14,9 @@ const PORT = 4000;
 //GLOBAL MIDDLEWARES
 app.use(cors());
 app.use(express.json());
+
+//Routes
+app.use("/api", userRoutes);
 
 //Testing POSTEGRES Connection
 app.get("/", async (req, res) => {
@@ -25,5 +31,6 @@ app.get("/", async (req, res) => {
 //OTHER MIDDLEWARES
 
 //ERROR HANDLING MIDDLEWARES
+app.use(errorHandling);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
