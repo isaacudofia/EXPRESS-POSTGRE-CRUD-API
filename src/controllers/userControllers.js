@@ -55,7 +55,7 @@ export const updateUser = async (req, res, next) => {
   try {
     const userId = req.params.id;
     const updatedUser = await updateUserService(userId, name, email);
-    if (!user) return handleResponse(res, 404, "User not found");
+    if (!updatedUser) return handleResponse(res, 404, "User not found");
     handleResponse(
       res,
       200,
@@ -71,7 +71,7 @@ export const deleteUser = async (req, res, next) => {
   try {
     const userId = req.params.id;
     const deletedUser = await deleteUserService(userId);
-    if (!user) return handleResponse(res, 404, "User not found");
+    if (!deletedUser) return handleResponse(res, 404, "User not found");
     handleResponse(
       res,
       200,
