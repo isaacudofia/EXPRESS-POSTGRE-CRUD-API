@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import pool from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
 import errorHandling from "./middlewares/errorHandler.js";
+import createUserTable from "./data/createUserTable.js";
 
 dotenv.config();
 
@@ -32,5 +33,8 @@ app.get("/", async (req, res) => {
 
 //ERROR HANDLING MIDDLEWARES
 app.use(errorHandling);
+
+//CREATE TABLE BEFORE STARTING SERVER
+createUserTable();
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
