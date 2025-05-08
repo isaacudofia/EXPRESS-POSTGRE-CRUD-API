@@ -24,7 +24,7 @@ This project is a simple CRUD (Create, Read, Update, Delete) API built using **E
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/express-postgre-crud-api.git
+   git clone https://github.com/isaacudofia/express-postgre-crud-api.git
    cd express-postgre-crud-api
 
 ## Install Dependencies
