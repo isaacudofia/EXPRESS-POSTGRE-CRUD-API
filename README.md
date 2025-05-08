@@ -11,9 +11,6 @@ This project is a simple CRUD (Create, Read, Update, Delete) API built using **E
 - **Environment Configuration**: Uses **dotenv** for environment variable management.
 - **Modular Codebase**: Organized into controllers, models, routes, and middlewares.
 
-## Project Structure
-.gitignore package.json src/ .env server.js config/ db.js controllers/ userControllers.js data/ createUserTable.js data.sql middlewares/ errorHandler.js inputValidator.js models/ userModel.js routes/ userRoutes.j
-
 ## Prerequisites
 
 - **Node.js** (v16 or higher)
