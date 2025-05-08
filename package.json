@@ -1,7 +1,7 @@
 {
   "name": "express-postgre-crud-api",
   "version": "1.0.0",
-  "description": "express-postgre-crud-api",
+  "description": "express-postgre-crud-api-with-docker",
   "main": "./src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
