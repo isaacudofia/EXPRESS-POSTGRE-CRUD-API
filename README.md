@@ -27,5 +27,20 @@ This project is a simple CRUD (Create, Read, Update, Delete) API built using **E
    git clone https://github.com/your-username/express-postgre-crud-api.git
    cd express-postgre-crud-api
 
+## Install Dependencies
+    npm install
 
-   
+## Create a .env file in the src/ directory with following content
+    DB_USER=your_db_user
+    DB_PASSWORD=your_db_password
+    DB_HOST=localhost
+    DB_PORT=5432
+    DB_DATABASE=your_database_name
+
+## Create a users table in your PostgreSQL database
+    node src/data/createUserTable.js
+
+## Start the development server
+    npm run dev
+
+
